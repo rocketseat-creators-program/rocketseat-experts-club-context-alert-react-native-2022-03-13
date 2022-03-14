@@ -17,20 +17,20 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
-const Home: React.FC<Props> = ({navigation}) => {
+const Login: React.FC<Props> = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home da aplicação</Text>
 
       <Button
         color="lightgray"
-        title="Ver perfil"
+        title="Fazer login"
         onPress={() => navigation.navigate('Profile')}
       />
     </View>
   );
 };
 
-export default Home;
+export default Login;
