@@ -3,6 +3,7 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import Login from './src/pages/Login';
 import Profile from './src/pages/Profile';
 import Settings from './src/pages/Settings';
