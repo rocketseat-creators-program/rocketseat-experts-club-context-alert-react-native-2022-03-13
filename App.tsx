@@ -8,6 +8,8 @@ import Login from './src/pages/Login';
 import Profile from './src/pages/Profile';
 import Settings from './src/pages/Settings';
 
+import {AlertContextProvider} from './src/contexts/alert';
+
 export type RootStackParamList = {
   Login: undefined;
   Profile: undefined;
@@ -18,13 +20,15 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Settings" component={Settings} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <AlertContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Settings" component={Settings} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </AlertContextProvider>
   );
 }
 
